@@ -1,0 +1,45 @@
+<%- include("./layouts/header.ejs") %>  
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+    <%- include("./layouts/navbar.ejs") %>
+    <div class="form-container">
+        <h2>Add Your Contact</h2>
+        <form action="/save" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken%>">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number">
+            </div>
+            <div class="form-group">
+                <label for="shopName">Shop Name:</label>
+                <input type="text" id="shopName" name="shopName" placeholder="Enter your shop name">
+            </div>
+            <div class="form-group">
+                <label for="province">Province:</label>
+                <select id="province" name="province">
+                    <option value="">Select your province</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Sindh">Sindh</option>
+                    <option value="Khyber Pakhtunkhwa">KhyberPakhtunkhwa</option>
+                    <option value="Balochistan">Balochistan</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="GilgitBaltistan">GilgitBaltistan</option>
+                    <option value="AzadJammuAndKashmir">AzadJammuAndKashmir</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="district">District:</label>
+                <select id="district" name="district">
+                    <option value="">Select your district</option>
+                </select>
+            </div>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+    <%- include("./layouts/footer.ejs") %>

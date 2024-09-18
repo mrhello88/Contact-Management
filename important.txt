@@ -1,0 +1,4 @@
+database user password:O0kmn8Vij31FSWHd
+username:abubakrsattar88
+
+connectString:mongodb+srv://abubakrsattar88:O0kmn8Vij31FSWHd@cluster0.oufj0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

@@ -1,0 +1,34 @@
+<%- include("./layouts/header.ejs") %>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/home.css">
+
+</head>
+<body>
+<%- include("./layouts/navbar.ejs") %>
+
+<main class="main-content">
+    <header class="hero">
+        <!-- <img src="/images/hero-image.jpg" alt="Hero Image" class="hero-image"> -->
+        <div class="hero-text">
+            <h1>Welcome to Contact Manager</h1>
+            <p>Manage your contacts effortlessly. Ensure no duplication within the same district and download PDFs of your contact lists.</p>
+        </div>
+    </header>
+    <section class="features">
+        <div class="feature">
+            <h2>Smart Duplicate Check</h2>
+            <p>Our system checks for duplicate contacts within the same district. If a contact already exists, it won't be saved again.</p>
+        </div>
+        <div class="feature">
+            <h2>Flexible Contact Saving</h2>
+            <p>Save contacts with the same number in different districts of the same province. We ensure no duplicates within a district.</p>
+        </div>
+        <div class="feature">
+            <h2>PDF Download</h2>
+            <p>Easily download PDFs of your contacts. Get a comprehensive list of all contacts in a district with no duplications.</p>
+        </div>
+    </section>
+</main>
+
+<%- include("./layouts/footer.ejs") %>

@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="/" class="nav-link">Home</a>
+    <% if(isLoggedIn){ %>
+    <a href="/add" class="nav-link">Add</a>
+    <a href="/download" class="nav-link">Download</a>
+    <% } %>
+  </div>
+  <div class="navbar-right">
+    <% if(isLoggedIn){ %>
+    <a href="/" class="nav-link">LogOut</a>
+    <% }else{%>
+    <a href="/login" class="nav-link">Login</a>
+    <a href="/register" class="nav-link">Register</a>
+    <% } %>
+  </div>
+</nav>

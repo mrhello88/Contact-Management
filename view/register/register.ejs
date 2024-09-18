@@ -1,0 +1,32 @@
+<%- include("../layouts/header.ejs") %>
+<link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include("../layouts/navbar.ejs") %>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form action="/register" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken%>">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="text" id="confirm-password" name="confirmPassword" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <p class="register-link">Already have an account? <a href="/login">Login here</a></p>
+    </div>
+    <%- include("../layouts/footer.ejs") %>

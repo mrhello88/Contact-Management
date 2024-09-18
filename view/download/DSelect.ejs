@@ -1,0 +1,40 @@
+<%- include("../layouts/header.ejs") %>
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/DSelect.css">
+<link rel="stylesheet" href="/css/style.css">
+
+
+</head>
+<body>
+    <%- include("../layouts/navbar.ejs") %>
+    <div class="container">
+        <h2>Select The District</h2>
+        <form action="/download" method="post" class="selectors">
+            <input type="hidden" name="_csrf" value="<%= csrfToken%>">
+            <div class="form-group">
+                <label for="province">Province:</label>
+                <select id="province" name="province" id="province" required>
+                    <option value="">Select your province</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Sindh">Sindh</option>
+                    <option value="Khyber Pakhtunkhwa">KhyberPakhtunkhwa</option>
+                    <option value="Balochistan">Balochistan</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="GilgitBaltistan">GilgitBaltistan</option>
+                    <option value="AzadJammuAndKashmir">AzadJammuAndKashmir</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="district">District:</label>
+                <select id="district" name="district" id="district" required>
+                    <option value="">Select your district</option>
+
+                    <!-- Dynamic districts based on selected province -->
+                </select>
+            </div>
+            <button type="submit">Download</button>
+        </form>
+    </div>
+<%- include("../layouts/footer.ejs") %>
+
+
