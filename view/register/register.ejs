@@ -6,6 +6,7 @@
 <body>
     <%- include("../layouts/navbar.ejs") %>
     <div class="register-container">
+        <h1>Check your mail, After Register</h1>
         <h2>Register</h2>
         <form action="/register" method="POST">
             <input type="hidden" name="_csrf" value="<%= csrfToken%>">
