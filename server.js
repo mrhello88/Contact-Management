@@ -48,11 +48,16 @@ app.use((error, req, res, next) => {
       pageTitle: "Server Error",
       errorMessage: error.message || "Something went wrong!",
     });
-  }
+  } 
 });
 
 console.log("pakistan");
 
-mongoose.connect(process.env.DB_STRING).then(() => {
+mongoose.connect(process.env.DB_STRING,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  ssl: true, // This ensures SSL is used
+  tlsInsecure: true, // Allows Heroku to connect even if there's a certificate issue
+}).then(() => {
   app.listen(port);
-});
+}); 
