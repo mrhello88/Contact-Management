@@ -2,7 +2,7 @@
   "name": "checker",
   "version": "1.0.0",
   "description": "it's about the number's check it's not same",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
