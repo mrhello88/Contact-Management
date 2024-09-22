@@ -31,7 +31,7 @@ const sendMail = (email, token,next) => {
                     <p style="font-size: 16px; color: #333333; margin-bottom: 20px;">Hello,</p>
                     <p style="font-size: 16px; color: #333333; margin-bottom: 20px;">Please verify your email by clicking the link below:</p>
                     <p style="text-align: center; margin: 40px 0;">
-                      <a href="http://localhost:5000/verify/${token}" style="display: inline-block; padding: 10px 20px; background-color: #5cb85c; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 16px;">Verify Email</a>
+                      <a href="https://contact-management0-818515327b89.herokuapp.com/verify/${token}" style="display: inline-block; padding: 10px 20px; background-color: #5cb85c; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 16px;">Verify Email</a>
                     </p>
                     <p style="font-size: 14px; color: #999999;">If you didn't request this, ignore this email.</p>
                   </td>
